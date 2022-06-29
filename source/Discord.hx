@@ -36,9 +36,9 @@ class DiscordClient
 	static function onReady()
 	{
 		DiscordRpc.presence({
-			details: "Doxxing FNF",
+			details: "Stylus Engine|FNF",
 			state: null,
-			largeImageKey: 'icon',
+			largeImageKey: 'iconog',
 			largeImageText: "FNF|Stylus Engine"
 		});
 	}
@@ -74,7 +74,7 @@ class DiscordClient
 		DiscordRpc.presence({
 			details: details,
 			state: state,
-			largeImageKey: 'icon',
+			largeImageKey: 'iconog',
 			largeImageText: "FNF|Stylus Engine",
 			smallImageKey : smallImageKey,
 			// Obtained times are in milliseconds so they are divided so Discord can use it
