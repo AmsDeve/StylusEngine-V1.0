@@ -14,7 +14,7 @@ public static var DataGit = 'github.com';
 
 public static var author = 'AmsDev';
 
-public static var contributors = '${author}';
+public static var contributors = '${author} & AndyGamer';
 
 public static var funkinTeam = '${NGio.funkinCrew}';
 
