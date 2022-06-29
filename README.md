@@ -2,8 +2,8 @@
 
 ![FnF logo](art/thumbnailNewer.png)
 
-[![Discord](https://img.shields.io/discord/808039740464300104?label=discord)](https://discord.gg/tdAy72Bu)
-[![FnF modding community](https://img.shields.io/discord/808039740464300104?label=discord)](https://discord.gg/Aw4dzGRC)
+[![Discord](https://discord.gg/tdAy72Bu)]
+[![FnF modding community](https://discord.gg/Aw4dzGRC)]
 
 This is the Engine for Friday Night Funkin, game made by  [NinjaMuffin99](https://twitter.com/ninja_muffin99) 
 
