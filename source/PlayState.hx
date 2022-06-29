@@ -1914,8 +1914,6 @@ class PlayState extends MusicBeatState
 							{
 								if (Math.abs(daNote.noteData)== spr.ID)
 									{
-
-if (FlxG.save.data.enemyStrums)
 										spr.animation.play('confirm', true);
 
 
