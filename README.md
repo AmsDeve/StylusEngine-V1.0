@@ -34,6 +34,8 @@ class APIStuff
 
 ## Libs you need to install
 
+### If you want to contribute in Stylus Engine, read [this](art/readme.txt).
+
 - haxelib git polymod https://github.com/PabloelproxD210/Polymod
 - haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
 - haxelib git flixel-addons https://github.com/HaxeFlixel/flixel-addons
