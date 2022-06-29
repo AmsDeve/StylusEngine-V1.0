@@ -27,7 +27,6 @@ class OptionsMenu extends MusicBeatState
 		new OptionCategory("Visual", [
 			new FPSvis(),
 			new BGcharacters(),
-			new EnemyStrums(),
 			new DaRatingComplex(),
 			new CirclesNotes()
 		]),
