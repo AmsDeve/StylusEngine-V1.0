@@ -4,7 +4,7 @@
 
 ### If you want to contribute in Stylus Engine, read [this](art/README.md).
 
-- **[Oficial Discord](https://discord.gg/tdAy72Bu)**
+- **[Oficial Discord](https://discord.gg/TGs8jBTBux)**
 - **[FnF modding community](https://discord.gg/Aw4dzGRC)**
 
 This is the Engine for Friday Night Funkin, game made by  [NinjaMuffin99](https://twitter.com/ninja_muffin99) 
