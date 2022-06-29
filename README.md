@@ -1,6 +1,6 @@
 # Stylus Engine
 
-![FnF logo](assets/preload/images/funkin_logo.png)
+![FnF logo](art/thumbnailNewer.png)
 
 [![Discord](https://img.shields.io/discord/808039740464300104?label=discord)](https://discord.gg/tdAy72Bu)
 [![FnF modding community](https://img.shields.io/discord/808039740464300104?label=discord)](https://discord.gg/Aw4dzGRC)
