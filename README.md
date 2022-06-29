@@ -11,6 +11,21 @@ Go to support NinjaMuffin cuz u know its the creator xd:https://ninja-muffin24.i
 - [AmsDev](https://twitter.com/AmsDev2) - Programmer & Engine Creator
 - [AndyGamer](https://twitter.com/AndyGamer1116YT) - Icon artist
 
+## APIStuff
+
+create APIStuff.hx
+and put this
+
+`````
+package;
+
+class APIStuff
+{
+	public static var API:String = "";
+	public static var EncKey:String = "";
+}
+`````
+
 ## Libs you need to install
 
 - haxelib git polymod https://github.com/PabloelproxD210/Polymod
