@@ -22,10 +22,9 @@ Go to support NinjaMuffin cuz u know its the creator xd:https://ninja-muffin24.i
 
 Oh and thx(fuck u) MDC for passing me the libs :]
 
-
 ![FUCK U](art/readme/fckUmdc.PNG)
 
-## Prevs ([skip](##thx))
+## Previews
 
 ![MENU](art/readme/Menu.PNG)
 
@@ -37,7 +36,7 @@ Oh and thx(fuck u) MDC for passing me the libs :]
 
 ![GAMEPLAY](art/readme/Gameplay.PNG)
 
-## Thx
+## Enjoy!
 
 Thx for download the engine have fun!!!!
 
