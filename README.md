@@ -4,8 +4,11 @@
 
 ### If you want to contribute in Stylus Engine, read [this](art/README.md).
 
-- **[Oficial Discord](https://discord.gg/TGs8jBTBux)**
+# DCservers
+- **[Oficial AmsDev Discord](https://discord.gg/TGs8jBTBux)**
 - **[FnF modding community](https://discord.gg/Aw4dzGRC)**
+
+### Desc
 
 This is the Engine for Friday Night Funkin, game made by  [NinjaMuffin99](https://twitter.com/ninja_muffin99) 
 
@@ -33,6 +36,10 @@ class APIStuff
 	public static var Off:String = "";
 }
 `````
+## Bugs
+
+**If you have some problems contact me in mi oficial server
+You can also ask the server moderators for help** [Here](#dcservers)
 
 ## Libs you need to install
 
