@@ -164,7 +164,7 @@ class BGcharacters extends Option
 	}
 }
 
-/*class KeyBinds extends Option
+/*class KeyBinds extends Option                    old keybinds
 {
 	private var controls:Controls;
 
@@ -192,21 +192,6 @@ class BGcharacters extends Option
 		return (!FlxG.save.data.keyBinds ? "Q-W-O-P" : "A-S-K-L");
 	}
 }*/
-
-class EnemyStrums extends Option
-{
-	public override function press():Bool
-	{
-		FlxG.save.data.enemyStrums = !FlxG.save.data.enemyStrums;
-		display = updateDisplay();
-		return true;
-	}
-
-	private override function updateDisplay():String
-	{
-		return "Enemy-Strums " + (!FlxG.save.data.enemyStrums ? "off" : "on");
-	}
-}
 
 class HudMGS extends Option
 {
