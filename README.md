@@ -2,6 +2,8 @@
 
 ![FnF logo](art/thumbnailNewer.png)
 
+### If you want to contribute in Stylus Engine, read [this](art/README.md).
+
 - **[Oficial Discord](https://discord.gg/tdAy72Bu)**
 - **[FnF modding community](https://discord.gg/Aw4dzGRC)**
 
@@ -33,8 +35,6 @@ class APIStuff
 `````
 
 ## Libs you need to install
-
-### If you want to contribute in Stylus Engine, read [this](art/readme.txt).
 
 - haxelib git polymod https://github.com/PabloelproxD210/Polymod
 - haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
