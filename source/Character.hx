@@ -15,28 +15,41 @@ class Character extends FlxSprite
 	public var iconColor:FlxColor = 0xFFFFFFFF;
 
 	public var isPlayer:Bool = false;
-	public var isGf:Bool = false;
 	public var curCharacter:String = 'bf';
-	public var curGirlfriend:String = 'gf';
 
 	public var holdTimer:Float = 0;
 
-	public function new(x:Float, y:Float, ?character:String = "bf", ?isPlayer:Bool = false, ?isGf:Bool = false)
+	public function new(x:Float, y:Float, ?character:String = "bf", ?isPlayer:Bool = false)
 	{
 		super(x, y);
 
 		animOffsets = new Map<String, Array<Dynamic>>();
 		curCharacter = character;
-		curGirlfriend = character;
 		this.isPlayer = isPlayer;
 		switch (curCharacter) {
-			case 'bf'|'bf-christmas'|'bf-car'|'bf-pixel':
-			iconColor = 0xFF00FFFF;
-			}
-		this.isGf = isGf;
-		switch (curGirlfriend) {
+				//icons colors
+			case 'bf'|'bf-christmas'|'bf-car':
+			iconColor = 0xFF31B0D1;
+			case 'bf-pixel':
+				iconColor = 0xFF7BD6F6;
 			case 'gf'|'gf-christmas'|'gf-car'|'gf-pixel':
-			iconColor = 0xFF900C3F;
+			iconColor = 0xFFA5004D;
+			case 'pico':
+				iconColor = 0xFFB7D855;
+			case 'spooky':
+				iconColor = 0xFFB4B4B4;
+			case 'monster'|'monster-christmas':
+				iconColor = 0xFFF2FF6D;
+			case 'dad':
+				iconColor = 0xFFBD7BD3;
+			case 'mom'|'mom-car':
+				iconColor = 0xFFD8558E;
+			case 'parents-christmas':
+				iconColor = 0xFFBD7BD3;
+			case 'senpai'|'senpai-angry':
+				iconColor = 0xFFFFAA6F;
+			case 'spirit':
+				iconColor = 0xFFFF3C6E;
 			}
 
 		var tex:FlxAtlasFrames;
@@ -146,8 +159,6 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN', 24);
 				animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24);
 
-				iconColor = 0xFFA569BD;
-
 				addOffset('idle');
 				addOffset("singUP", -6, 50);
 				addOffset("singRIGHT", 0, 27);
@@ -164,8 +175,6 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'spooky sing right', 24, false);
 				animation.addByIndices('danceLeft', 'spooky dance idle', [0, 2, 6], "", 12, false);
 				animation.addByIndices('danceRight', 'spooky dance idle', [8, 10, 12, 14], "", 12, false);
-
-				iconColor = 0xFF808080;
 
 				addOffset('danceLeft');
 				addOffset('danceRight');
@@ -188,8 +197,6 @@ class Character extends FlxSprite
 				// CUZ DAVE IS DUMB!
 				animation.addByPrefix('singRIGHT', 'Mom Pose Left', 24, false);
 
-				iconColor = 0xFFFF81FF;
-
 				addOffset('idle');
 				addOffset("singUP", 14, 71);
 				addOffset("singRIGHT", 10, -60);
@@ -210,8 +217,6 @@ class Character extends FlxSprite
 				// CUZ DAVE IS DUMB!
 				animation.addByPrefix('singRIGHT', 'Mom Pose Left', 24, false);
 
-				iconColor = 0xFFFF81FF;
-
 				addOffset('idle');
 				addOffset("singUP", 14, 71);
 				addOffset("singRIGHT", 10, -60);
@@ -228,8 +233,6 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'Monster left note', 24, false);
 				animation.addByPrefix('singRIGHT', 'Monster Right note', 24, false);
 
-				iconColor = 0xFFFFBB1B;
-
 				addOffset('idle');
 				addOffset("singUP", -20, 50);
 				addOffset("singRIGHT", -51);
@@ -245,8 +248,6 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'monster down', 24, false);
 				animation.addByPrefix('singLEFT', 'Monster Left note', 24, false);
 				animation.addByPrefix('singRIGHT', 'Monster Right note', 24, false);
-
-                iconColor = 0xFFFFBB1B;
 
 				addOffset('idle');
 
@@ -280,8 +281,6 @@ class Character extends FlxSprite
 
 				animation.addByPrefix('singUPmiss', 'pico Up note miss', 24);
 				animation.addByPrefix('singDOWNmiss', 'Pico Down Note MISS', 24);
-
-				iconColor = 0xFF88FF6A;
 
 				addOffset('idle');
 				addOffset("singUP", -29, 27);
@@ -452,8 +451,6 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'SENPAI RIGHT NOTE', 24, false);
 				animation.addByPrefix('singDOWN', 'SENPAI DOWN NOTE', 24, false);
 
-				iconColor = 0xFFF8C471;
-
 				addOffset('idle');
 				addOffset("singUP", 5, 37);
 				addOffset("singRIGHT");
@@ -474,8 +471,6 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'Angry Senpai RIGHT NOTE', 24, false);
 				animation.addByPrefix('singDOWN', 'Angry Senpai DOWN NOTE', 24, false);
 
-				iconColor = 0xFFF8C471;
-
 				addOffset('idle');
 				addOffset("singUP", 5, 37);
 				addOffset("singRIGHT");
@@ -495,8 +490,6 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', "right_", 24, false);
 				animation.addByPrefix('singLEFT', "left_", 24, false);
 				animation.addByPrefix('singDOWN', "spirit down_", 24, false);
-
-				iconColor = 0xFFFF0000;
 
 				addOffset('idle', -220, -280);
 				addOffset('singUP', -220, -240);
@@ -524,8 +517,6 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN-alt', 'Parent Down Note Mom', 24, false);
 				animation.addByPrefix('singLEFT-alt', 'Parent Left Note Mom', 24, false);
 				animation.addByPrefix('singRIGHT-alt', 'Parent Right Note Mom', 24, false);
-
-				iconColor = 0xFFA569BD;
 
 				addOffset('idle');
 				addOffset("singUP", -47, 24);
