@@ -25,7 +25,7 @@ Oh and thx(fuck u) MDC for passing me the libs :]
 
 ![FUCK U](art/readme/fckUmdc.PNG)
 
-## Prevs ([skip](##enjoy!))
+## Prevs ([skip](##thx))
 
 ![MENU](art/readme/Menu.PNG)
 
@@ -37,7 +37,7 @@ Oh and thx(fuck u) MDC for passing me the libs :]
 
 ![GAMEPLAY](art/readme/Gameplay.PNG)
 
-## Enjoy!
+## Thx
 
 Thx for download the engine have fun!!!!
 
