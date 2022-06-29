@@ -9,6 +9,7 @@ All notable changes will be documented in this file.
 - Input
 - Rating offset zone
 ### Added
+- EnemyStrums active
 - Hud Data
 - Rating Complex
 - Options Menu
