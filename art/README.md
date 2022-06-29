@@ -2,3 +2,6 @@
 
 - First contact me in discord [AmsPosting#1859]()
 - Then you have to tell me the changes you will make either in code or images
+- After that you have to send me some projects you have done to see if you have enough knowledge
+
+# And that's it, you are part of the Stylus Engine team
