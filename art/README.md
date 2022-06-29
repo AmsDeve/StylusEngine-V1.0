@@ -19,6 +19,8 @@
 
 *And thats all*
 
+## How to help in the art section
+
 **To help me in the art section you need to add some things like:**
 
 - *Make a new logo*
