@@ -22,8 +22,8 @@ class APIStuff
 {
 	public static var API:String = "";
 	public static var EncKey:String = "";
-	public static var On = "";
-	public static var Off = "";
+	public static var On:String = "";
+	public static var Off:String = "";
 }
 `````
 
