@@ -1,0 +1,8 @@
+stage
+hallowen
+philly
+limo
+mall
+mallEvil
+school
+schoolEvil
