@@ -2,13 +2,17 @@
 
 ![FnF logo](art/thumbnailNewer.png)
 
-### If you want to contribute in Stylus Engine, read [this](art/README.md).
+# If you want to contribute in Stylus Engine, read [this](art/README.md).
 
-# DCservers
+# Discord
 - **[Oficial AmsDev Discord](https://discord.gg/TGs8jBTBux)**
 - **[FnF modding community](https://discord.gg/Aw4dzGRC)**
 
-### Desc
+# Tags
+
+`Stylus Engine`=`AmsDev`=`FridayNightFunkin'`=`Engine`=`NinjaMuffin`
+
+# Desc
 
 This is the Engine for Friday Night Funkin, game made by  [NinjaMuffin99](https://twitter.com/ninja_muffin99) 
 
@@ -16,11 +20,11 @@ Play the original game in:https://www.newgrounds.com/portal/view/770371
 
 **IF YOU MAKE A MOD IN THIS ENGINE, OPEN THE SOURCE CODE IF YOUR MOD AS WELL**
 
-## Credits
+# Credits
 - [AmsDev](https://twitter.com/AmsDev2) - Programmer & Engine Creator
 - [AndyGamer](https://twitter.com/AndyGamer1116YT) - Icon artist
 
-## APIStuff
+# APIStuff
 
 create APIStuff.hx
 and put this
@@ -36,12 +40,12 @@ class APIStuff
 	public static var Off:String = "";
 }
 `````
-## Bugs
+# Bugs
 
 **If you have some problems contact me in mi oficial server
-You can also ask the server moderators for help** [Here](#dcservers)
+You can also ask the server moderators for help** [Here](#discord)
 
-## Libs you need to install
+# Libs you need to install
 
 - haxelib git polymod https://github.com/PabloelproxD210/Polymod
 - haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
@@ -54,7 +58,7 @@ Oh and thx(fuck u) MDC for passing me the libs :]
 
 ![FUCK U](art/readme/fckUmdc.PNG)
 
-## Previews
+# Previews
 
 ![MENU](art/readme/Menu.PNG)
 
