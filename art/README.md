@@ -1,4 +1,4 @@
-## How can i support in Stylus Engine?
+# How can i support in Stylus Engine?
 
 - *First contact me in discord [AmsPosting#1859]()*
 - *Then you have to tell me the changes you will make either in code or images*
@@ -6,7 +6,7 @@
 
 **And that's it, you are part of the Stylus Engine team**
 
-## How to help in the source section
+# How to help in the source section
 
 **To help me in the source section you need to add some things like:**
 
@@ -14,12 +14,11 @@
 - *Fix some bugs*
 - *Fix the reset score*
 - *Fix the offsets of circular notes*
-- *Freeplay menu*
-- *Charting menu Song section*
+- *Credits menu*
 
 *And thats all*
 
-## How to help in the art section
+# How to help in the art section
 
 **To help me in the art section you need to add some things like:**
 
