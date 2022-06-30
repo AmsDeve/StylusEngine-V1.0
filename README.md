@@ -11,6 +11,7 @@
 # Tags
 
 `Stylus Engine`=`AmsDev`=`FridayNightFunkin'`=`Engine`=`NinjaMuffin`
+`NewGrounds`=`FreeGame`=`FnFoptions`
 
 # Desc
 
