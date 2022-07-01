@@ -5,8 +5,8 @@
 # If you want to contribute in Stylus Engine, read [this](art/README.md).
 
 # Discord
-- **[Oficial AmsDev Discord](https://discord.gg/TGs8jBTBux)**
-- **[FnF modding community](https://discord.gg/Aw4dzGRC)**
+- Ams Community **[![DiscordOf](https://img.shields.io/discord/778038568680554497?label=discord)](https://discord.gg/TGs8jBTBux)**
+- MDC **[![DiscordMDC](https://img.shields.io/discord/778038568680554497?label=discord)](https://discord.gg/Aw4dzGRC)**
 
 # Compiling
 
