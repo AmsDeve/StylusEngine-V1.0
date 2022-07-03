@@ -317,9 +317,9 @@ class ChartingState extends MusicBeatState
 
 	var stepperLength:FlxUINumericStepper;
 	var check_mustHitSection:FlxUICheckBox;
-	var check_SUSY:FlxUICheckBox;
 	var check_changeBPM:FlxUICheckBox;
 	var stepperSectionBPM:FlxUINumericStepper;
+	var check_altAnim:FlxUICheckBox;
 
 	function addSectionUI():Void
 	{
@@ -359,6 +359,9 @@ class ChartingState extends MusicBeatState
 		check_mustHitSection.checked = true;
 		// _song.needsVoices = check_mustHit.checked;
 
+		check_altAnim = new FlxUICheckBox(10, 100, null, null, "Alt Animation", 100);
+		check_altAnim.name = 'check_altAnim';
+
 		check_changeBPM = new FlxUICheckBox(10, 60, null, null, 'Change BPM', 100);
 		check_changeBPM.name = 'check_changeBPM';
 
@@ -370,6 +373,7 @@ class ChartingState extends MusicBeatState
 		tab_group_section.add(copyButton);
 		tab_group_section.add(clearSectionButton);
 		tab_group_section.add(swapSection);
+		tab_group_section.add(check_altAnim);
 
 		UI_box.addGroup(tab_group_section);
 	}
@@ -387,18 +391,8 @@ class ChartingState extends MusicBeatState
 
 		var applyLength:FlxButton = new FlxButton(100, 10, 'Apply');
 
-		var openPractice:FlxButton = new FlxButton(100, 50, 'Practice', function()
-			{
-				bullSHIT();
-			});
-
-		check_SUSY = new FlxUICheckBox(10, 50, null, null, 'Alt Notes', 100);
-		check_SUSY.name = 'glow_notes';
-
 		tab_group_note.add(stepperSusLength);
 		tab_group_note.add(applyLength);
-		tab_group_note.add(openPractice);
-		tab_group_note.add(check_SUSY);
 
 		UI_box.addGroup(tab_group_note);
 	}
@@ -465,6 +459,8 @@ class ChartingState extends MusicBeatState
 				case 'Change BPM':
 					_song.notes[curSection].changeBPM = check.checked;
 					FlxG.log.add('changed bpm shit');
+					case "Alt Animation":
+						_song.notes[curSection].altAnim = check.checked;
 			}
 		}
 		else if (id == FlxUINumericStepper.CHANGE_EVENT && (sender is FlxUINumericStepper))
@@ -860,6 +856,7 @@ class ChartingState extends MusicBeatState
 		stepperLength.value = sec.lengthInSteps;
 		check_mustHitSection.checked = sec.mustHitSection;
 		check_changeBPM.checked = sec.changeBPM;
+		check_altAnim.checked = sec.altAnim;
 		stepperSectionBPM.value = sec.bpm;
 
 		updateHeads();
@@ -1009,6 +1006,7 @@ class ChartingState extends MusicBeatState
 
 		updateGrid();
 	}
+
 
 	function clearSong():Void
 	{
