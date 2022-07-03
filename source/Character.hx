@@ -262,16 +262,16 @@ class Character extends FlxSprite
 				tex = Paths.getSparrowAtlas('Pico_FNF_assets');
 				frames = tex;
 				animation.addByPrefix('idle', "Pico Idle Dance", 24);
-				animation.addByPrefix('singUp-alt', "Pico hey", 24);
+				animation.addByPrefix('singUP-alt', "Pico hey", 24);
 				animation.addByPrefix('singUP', 'pico Up note0', 24, false);
 				animation.addByPrefix('singDOWN', 'Pico Down Note0', 24, false);
 				animation.addByPrefix('singLEFT', 'Pico NOTE LEFT0', 24, false);
 				animation.addByPrefix('singRIGHT', 'Pico Note Right0', 24, false);
 				
 				addOffset('idle');
-				addOffset("singUP-alt", -29, 25);
-				addOffset("singUP", -29, 20);
-				addOffset("singRIGHT", 68, 14);
+				addOffset("singUP-alt", -45, -20);
+				addOffset("singUP", -29, 50);
+				addOffset("singRIGHT", 70, 14);
 				addOffset("singLEFT", -65, 10);
 				addOffset("singDOWN", 200, -68);
 				playAnim('idle');
