@@ -23,6 +23,10 @@ public static function initSave()
 		var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
 		
 		KeyBinds.gamepad = gamepad != null;
+	    
+	    
+	    if (FlxG.save.data.fullscreen)
+		FlxG.fullscreen = !FlxG.fullscreen;
 
 		PlayerSettings.player1.controls.loadKeyBinds();
 		KeyBinds.keyCheck();
