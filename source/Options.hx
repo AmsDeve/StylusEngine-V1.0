@@ -318,6 +318,7 @@ class FullScreen extends Option
 {
 	public override function press():Bool
 	{
+		FlxG.save.data.fullscreen = !FlxG.save.data.fullscreen;
 		FlxG.fullscreen = !FlxG.fullscreen;
 		display = updateDisplay();
 		return true;
@@ -325,7 +326,6 @@ class FullScreen extends Option
 
 	private override function updateDisplay():String
 	{
-		return (!FlxG.save.data.fullscreen ? "FullScreen" : "FullScreen");
+		return "FullScreen " + (!FlxG.save.data.fullscreen ? "off" : "on");
 	}
-
 }
