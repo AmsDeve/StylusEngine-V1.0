@@ -27,7 +27,6 @@ class Character extends FlxSprite
 		curCharacter = character;
 		this.isPlayer = isPlayer;
 		switch (curCharacter) {
-				//icons colors
 			case 'bf'|'bf-christmas'|'bf-car':
 			iconColor = 0xFF31B0D1;
 			case 'bf-pixel':
@@ -37,7 +36,7 @@ class Character extends FlxSprite
 			case 'pico':
 				iconColor = 0xFFB7D855;
 			case 'spooky':
-				iconColor = 0xFFB4B4B4;
+				iconColor = 0xFFdd947f;
 			case 'monster'|'monster-christmas':
 				iconColor = 0xFFF2FF6D;
 			case 'dad':
@@ -45,7 +44,7 @@ class Character extends FlxSprite
 			case 'mom'|'mom-car':
 				iconColor = 0xFFD8558E;
 			case 'parents-christmas':
-				iconColor = 0xFFBD7BD3;
+				iconColor = 0xFFcb6ab4;
 			case 'senpai'|'senpai-angry':
 				iconColor = 0xFFFFAA6F;
 			case 'spirit':
@@ -248,7 +247,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'monster down', 24, false);
 				animation.addByPrefix('singLEFT', 'Monster Right note', 24, false);
 				animation.addByPrefix('singRIGHT', 'Monster left note', 24, false);
-				
+
 				addOffset('idle');
 
 				addOffset("singUP", -20, 50);
@@ -258,18 +257,17 @@ class Character extends FlxSprite
 				
 				playAnim('idle');
 			case 'pico':
-				case 'pico':
 				tex = Paths.getSparrowAtlas('Pico_FNF_assets');
 				frames = tex;
 				animation.addByPrefix('idle', "Pico Idle Dance", 24);
-				animation.addByPrefix('singUP-alt', "Pico hey", 24);
+				animation.addByPrefix('hey', "Pico hey", 24);
 				animation.addByPrefix('singUP', 'pico Up note0', 24, false);
 				animation.addByPrefix('singDOWN', 'Pico Down Note0', 24, false);
 				animation.addByPrefix('singLEFT', 'Pico NOTE LEFT0', 24, false);
 				animation.addByPrefix('singRIGHT', 'Pico Note Right0', 24, false);
 				
 				addOffset('idle');
-				addOffset("singUP-alt", -45, -20);
+				addOffset("hey", -45, -20);
 				addOffset("singUP", -29, 50);
 				addOffset("singRIGHT", 70, 14);
 				addOffset("singLEFT", -65, 10);
@@ -291,7 +289,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
 				animation.addByPrefix('dodge', 'boyfriend dodge', 24, false);
-				animation.addByPrefix('hey', 'BF HEY', 24, false);
+				animation.addByPrefix('singUP-alt', 'BF HEY', 24, false);
 				animation.addByPrefix('hit', 'BF hit', 24, false);
 
 				animation.addByPrefix('firstDeath', "BF dies", 24, false);
