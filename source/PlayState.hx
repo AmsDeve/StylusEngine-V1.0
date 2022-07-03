@@ -159,6 +159,8 @@ class PlayState extends MusicBeatState
 
 		trace(SONG.song, storyDifficulty == 2 ? "Hard" : storyDifficulty == 1 ? "Normal" : "Easy");
 
+		//FlxG.log.add(curBeat);
+
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
 		camHUD = new FlxCamera();
@@ -1898,7 +1900,7 @@ class PlayState extends MusicBeatState
 							if (SONG.notes[Math.floor(curStep / 16)].altAnim)
 								altAnim = '-alt';
 						}
-	
+
 						switch (Math.abs(daNote.noteData))
 						{
 							case 0:
@@ -1909,6 +1911,26 @@ class PlayState extends MusicBeatState
 								dad.playAnim('singUP' + altAnim, true);
 							case 3:
 								dad.playAnim('singRIGHT' + altAnim, true);
+						}
+
+						var heyAnim:String = "";
+	
+						if (SONG.notes[Math.floor(curStep / 16)] != null)
+						{
+							if (SONG.notes[Math.floor(curStep / 16)].heyAnim)
+								heyAnim = 'hey';
+						}
+
+						switch (Math.abs(daNote.noteData))
+						{
+							case 0:
+								dad.playAnim(heyAnim, true);
+							case 1:
+								dad.playAnim(heyAnim, true);
+							case 2:
+								dad.playAnim(heyAnim, true);
+							case 3:
+								dad.playAnim(heyAnim, true);
 						}
 						enemyStrums.forEach(function(spr:FlxSprite)
 							{
@@ -2580,6 +2602,25 @@ class PlayState extends MusicBeatState
 					boyfriend.playAnim('singRIGHT', true);
 			}
 
+			/*var altAnim:String = "";
+	
+						if (SONG.notes[Math.floor(curStep / 16)] != null)
+						{
+							if (SONG.notes[Math.floor(curStep / 16)].altAnim)
+								altAnim = '-alt';
+						}
+	
+						switch (Math.abs(note.noteData))
+						{
+							case 0:
+								boyfriend.playAnim('singLEFT' + altAnim, true);
+							case 1:
+								boyfriend.playAnim('singDOWN' + altAnim, true);
+							case 2:
+								boyfriend.playAnim('singUP' + altAnim, true);
+							case 3:
+								boyfriend.playAnim('singRIGHT' + altAnim, true);
+						}*/
 			playerStrums.forEach(function(spr:FlxSprite)
 			{
 				if (Math.abs(note.noteData) == spr.ID)
@@ -2775,13 +2816,11 @@ class PlayState extends MusicBeatState
 		if(curBeat % 4 == 2 && curSong == 'Blammed' && curBeat > 30 && curBeat < 96)
 		{
 			gf.playAnim('cheer', true);
-			FlxG.camera.zoom += 0.120;
 		}
 
 		if(curBeat % 4 == 2 && curSong == 'Blammed' && curBeat > 129 && curBeat < 190)
 		{
 			gf.playAnim('cheer', true);
-			FlxG.camera.zoom += 0.120;
 		}
 			
 
