@@ -203,12 +203,6 @@ class TitleState extends MusicBeatState
 		blackScreen = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		credGroup.add(blackScreen);
 
-		credTextShit = new Alphabet(0, 0, "AmsDev" + (FlxG.keys.justPressed.ENTER ? "off" : "on"), true);
-		credTextShit.screenCenter();
-		add(credTextShit);
-
-		// credTextShit.alignment = CENTER;
-
 		credTextShit.visible = false;
 
 		ngSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('newgrounds_logo'));
@@ -400,7 +394,7 @@ class TitleState extends MusicBeatState
 			case 2:
 				#if AMS_WTRMRKS
 				deleteCoolText();
-				createCoolText(['AmsDev']);
+				createCoolText(['AmsDev', 'AndyGamer']);
 				#else
 				createCoolText(['ninjamuffin', 'kawaisprite', 'evilsk8r', 'phantomarcade']);
 				#end
