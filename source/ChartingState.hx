@@ -337,14 +337,14 @@ class ChartingState extends MusicBeatState
 
 		var stepperCopy:FlxUINumericStepper = new FlxUINumericStepper(110, 130, 1, 1, -999, 999, 0);
 
-		var copyButton:FlxButton = new FlxButton(10, 130, "Copy last section", function()
+			var copyButton:FlxButton = new FlxButton(10, 160, "Copy last section", function()
 		{
 			copySection(Std.int(stepperCopy.value));
 		});
 
-		var clearSectionButton:FlxButton = new FlxButton(10, 150, "Clear", clearSection);
+		var clearSectionButton:FlxButton = new FlxButton(10, 180, "Clear", clearSection);
 
-		var swapSection:FlxButton = new FlxButton(10, 170, "Swap section", function()
+		var swapSection:FlxButton = new FlxButton(10, 200, "Swap section", function()
 		{
 			for (i in 0..._song.notes[curSection].sectionNotes.length)
 			{
