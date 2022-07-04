@@ -89,7 +89,7 @@ class AnimationDebug extends FlxState
 		textAnim.scrollFactor.set();
 		add(textAnim);
 
-		helpTxt = new FlxText(10, 600, 0, "Press X to convert in enemy\nPress Z to convert in playable char\nCTRL + S to save offsets", 16);
+		helpTxt = new FlxText(10, 650, 0, "Press X to convert in enemy\nPress Z to convert in playable char", 16);
 	helpTxt.scrollFactor.set();
 	helpTxt.color = FlxColor.BLACK;
 		add(helpTxt);
