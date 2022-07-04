@@ -1515,6 +1515,11 @@ class PlayState extends MusicBeatState
 
 		scoreTxt.x = (FlxG.width / 2) - (scoreTxt.width / 2);
 
+				if (FlxG.keys.justPressed.EIGHT){
+				FlxG.switchState(new AnimationDebug(SONG.player2));
+			}
+
+
 		if (FlxG.keys.justPressed.ENTER && startedCountdown && canPause)
 		{
 			persistentUpdate = false;
