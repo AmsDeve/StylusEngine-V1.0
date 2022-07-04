@@ -1,5 +1,6 @@
 package;
 
+import polymod.format.ParseRules.PlainTextParseFormat;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
@@ -7,6 +8,9 @@ import flixel.FlxState;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.text.FlxText;
+import flixel.addons.ui.FlxUIDropDownMenu;
+import flixel.addons.ui.FlxUI;
+import flixel.addons.ui.FlxUITabMenu;
 import flixel.util.FlxColor;
 
 /**
@@ -16,6 +20,7 @@ class AnimationDebug extends FlxState
 {
 	var bf:Boyfriend;
 	var dad:Character;
+	var shade:Character;
 	var char:Character;
 	var textAnim:FlxText;
 	var dumbTexts:FlxTypedGroup<FlxText>;
@@ -24,6 +29,8 @@ class AnimationDebug extends FlxState
 	var isDad:Bool = true;
 	var daAnim:String = 'spooky';
 	var camFollow:FlxObject;
+	var helpTxt:FlxText;
+	var characters:Array<String> = CoolUtil.coolTextFile(Paths.txt('characterList'));
 
 	public function new(daAnim:String = 'spooky')
 	{
@@ -35,7 +42,7 @@ class AnimationDebug extends FlxState
 	{
 		FlxG.sound.music.stop();
 
-		var gridBG:FlxSprite = FlxGridOverlay.create(10, 10);
+		var gridBG:FlxSprite = new FlxSprite(0).loadGraphic(Paths.image('menuDesat'));
 		gridBG.scrollFactor.set(0.5, 0.5);
 		add(gridBG);
 
@@ -47,10 +54,20 @@ class AnimationDebug extends FlxState
 			dad = new Character(0, 0, daAnim);
 			dad.screenCenter();
 			dad.debugMode = true;
-			add(dad);
+
+			shade = new Character(0, 0, daAnim);
+            shade.screenCenter();
+            shade.playAnim('idle');
+
+            shade.alpha = 0.8;
+            shade.color = 0xFF140C1f;
+            shade.debugMode = true;
+			shade.flipX = true;
+            add(shade);
+            add(dad);
 
 			char = dad;
-			dad.flipX = false;
+			dad.flipX = true;
 		}
 		else
 		{
@@ -68,8 +85,14 @@ class AnimationDebug extends FlxState
 
 		textAnim = new FlxText(300, 16);
 		textAnim.size = 26;
+		textAnim.color = FlxColor.BLACK;
 		textAnim.scrollFactor.set();
 		add(textAnim);
+
+		helpTxt = new FlxText(10, 600, 0, "Press X to convert in enemy\nPress Z to convert in playable char\nCTRL + S to save offsets", 16);
+	helpTxt.scrollFactor.set();
+	helpTxt.color = FlxColor.BLACK;
+		add(helpTxt);
 
 		genBoyOffsets();
 
@@ -90,7 +113,7 @@ class AnimationDebug extends FlxState
 		{
 			var text:FlxText = new FlxText(10, 20 + (18 * daLoop), 0, anim + ": " + offsets, 15);
 			text.scrollFactor.set();
-			text.color = FlxColor.BLUE;
+			text.color = FlxColor.BLACK;
 			dumbTexts.add(text);
 
 			if (pushList)
@@ -113,32 +136,6 @@ class AnimationDebug extends FlxState
 	{
 		textAnim.text = char.animation.curAnim.name;
 
-		if (FlxG.keys.justPressed.E)
-			FlxG.camera.zoom += 0.25;
-		if (FlxG.keys.justPressed.Q)
-			FlxG.camera.zoom -= 0.25;
-
-		if (FlxG.keys.pressed.I || FlxG.keys.pressed.J || FlxG.keys.pressed.K || FlxG.keys.pressed.L)
-		{
-			if (FlxG.keys.pressed.I)
-				camFollow.velocity.y = -90;
-			else if (FlxG.keys.pressed.K)
-				camFollow.velocity.y = 90;
-			else
-				camFollow.velocity.y = 0;
-
-			if (FlxG.keys.pressed.J)
-				camFollow.velocity.x = -90;
-			else if (FlxG.keys.pressed.L)
-				camFollow.velocity.x = 90;
-			else
-				camFollow.velocity.x = 0;
-		}
-		else
-		{
-			camFollow.velocity.set();
-		}
-
 		if (FlxG.keys.justPressed.W)
 		{
 			curAnim -= 1;
@@ -149,11 +146,29 @@ class AnimationDebug extends FlxState
 			curAnim += 1;
 		}
 
+		if (FlxG.keys.justPressed.X)
+			{
+				dad.flipX = true;
+				shade.flipX = true;
+			}
+
+			if (FlxG.keys.justPressed.Z)
+				{
+					dad.flipX = false;
+					shade.flipX = false;
+				}
+
 		if (curAnim < 0)
 			curAnim = animList.length - 1;
 
 		if (curAnim >= animList.length)
 			curAnim = 0;
+
+		if (FlxG.keys.justPressed.ENTER)
+			{
+				PlayState.SONG;
+				FlxG.switchState(new PlayState());
+			}
 
 		if (FlxG.keys.justPressed.S || FlxG.keys.justPressed.W || FlxG.keys.justPressed.SPACE)
 		{
