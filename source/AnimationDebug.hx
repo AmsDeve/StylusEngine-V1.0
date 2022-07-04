@@ -29,6 +29,7 @@ class AnimationDebug extends FlxState
 	var isDad:Bool = true;
 	var daAnim:String = 'spooky';
 	var camFollow:FlxObject;
+	var flipText:FlxText;
 	var helpTxt:FlxText;
 	var characters:Array<String> = CoolUtil.coolTextFile(Paths.txt('characterList'));
 
@@ -62,12 +63,13 @@ class AnimationDebug extends FlxState
             shade.alpha = 0.8;
             shade.color = 0xFF140C1f;
             shade.debugMode = true;
-			shade.flipX = true;
+			
             add(shade);
             add(dad);
 
 			char = dad;
-			dad.flipX = true;
+			shade.flipX = false;
+			dad.flipX = false;
 		}
 		else
 		{
@@ -88,8 +90,15 @@ class AnimationDebug extends FlxState
 		textAnim.color = FlxColor.BLACK;
 		textAnim.scrollFactor.set();
 		add(textAnim);
+		flipText = new FlxText(10, 650, 0, '', 32);
+		add(flipText);
 
-		helpTxt = new FlxText(10, 650, 0, "Press X to convert in enemy\nPress Z to convert in playable char", 16);
+		helpTxt = new FlxText(800, 16, 0, "You cant save the offsets!\nThis is nothing more to guide you\nsince it will help you to see how it is positioned\nand write down the offsets in the character.hx", 16);
+	helpTxt.scrollFactor.set();
+	helpTxt.color = FlxColor.RED;
+		add(helpTxt);
+
+		helpTxt = new FlxText(10, 700, 0, "Press X to flip", 16);
 	helpTxt.scrollFactor.set();
 	helpTxt.color = FlxColor.BLACK;
 		add(helpTxt);
@@ -146,17 +155,19 @@ class AnimationDebug extends FlxState
 			curAnim += 1;
 		}
 
-		if (FlxG.keys.justPressed.X)
-			{
-				dad.flipX = true;
-				shade.flipX = true;
-			}
+		if (FlxG.keys.justPressed.X){
+			char.flipX = !char.flipX;
+		shade.flipX = !shade.flipX;
+		}
 
-			if (FlxG.keys.justPressed.Z)
-				{
-					dad.flipX = false;
-					shade.flipX = false;
-				}
+		FlxG.save.data.flipX = char.flipX;
+		FlxG.save.data.flipX = shade.flipX;
+
+		if (FlxG.keys.justPressed.Z)
+			FlxG.save.data.flipX = !FlxG.save.data.flipX;
+
+		flipText.color = (FlxG.save.data.flipX ? FlxColor.LIME :FlxColor.RED);
+		flipText.text = (FlxG.save.data.flipX ? 'FLIP' : 'NO FLIP');
 
 		if (curAnim < 0)
 			curAnim = animList.length - 1;
