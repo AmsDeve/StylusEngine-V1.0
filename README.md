@@ -28,22 +28,6 @@ Play the original game in:https://www.newgrounds.com/portal/view/770371
 - [AmsDev](https://twitter.com/AmsDev2) - Programmer & Engine Creator
 - [AndyGamer](https://twitter.com/AndyGamer1116YT) - Icon artist
 
-# APIStuff
-
-create APIStuff.hx
-and put this
-
-`````
-package;
-
-class APIStuff
-{
-	public static var API:String = "";
-	public static var EncKey:String = "";
-	public static var On:String = "";
-	public static var Off:String = "";
-}
-`````
 # Bugs
 
 **If you have some problems contact me in mi oficial server
