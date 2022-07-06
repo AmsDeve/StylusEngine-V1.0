@@ -337,7 +337,7 @@ class ChartingState extends MusicBeatState
 
 		var stepperCopy:FlxUINumericStepper = new FlxUINumericStepper(110, 130, 1, 1, -999, 999, 0);
 
-			var copyButton:FlxButton = new FlxButton(10, 160, "Copy last section", function()
+		var copyButton:FlxButton = new FlxButton(10, 160, "Copy last section", function()
 		{
 			copySection(Std.int(stepperCopy.value));
 		});
@@ -379,7 +379,7 @@ class ChartingState extends MusicBeatState
 		tab_group_section.add(swapSection);
 		tab_group_section.add(check_altAnim);
 		tab_group_section.add(check_heyAnim);
-		
+
 		UI_box.addGroup(tab_group_section);
 	}
 
@@ -746,7 +746,7 @@ class ChartingState extends MusicBeatState
 			+ curSection;
 		super.update(elapsed);
 
-		daBeatXD.text = 'CurBeat: $curBeat\nCurStep $curStep\nSong: ${PlayState.SONG.song}\nDifficulty: ${CoolUtil.difficultyString();}';
+		daBeatXD.text = 'CurBeat: $curBeat\nCurStep $curStep\nSong: ${PlayState.SONG.song}\nDifficulty: ${CoolUtil.difficultyString()}';
 
 		leng.text = 'SongLength: $songLength';
 	}
