@@ -1270,7 +1270,7 @@ class PlayState extends MusicBeatState
 					case 'normal':
 						babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets');
 						if (FlxG.save.data.circlesNotes)
-							babyArrow.frames = Paths.getSparrowAtlas('Circles');
+							babyArrow.frames = Paths.getSparrowAtlas('Circless');
 						babyArrow.animation.addByPrefix('green', 'arrowUP');
 						babyArrow.animation.addByPrefix('blue', 'arrowDOWN');
 						babyArrow.animation.addByPrefix('purple', 'arrowLEFT');
@@ -1306,7 +1306,7 @@ class PlayState extends MusicBeatState
 				default:
 					babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets');
 					if (FlxG.save.data.circlesNotes)
-							babyArrow.frames = Paths.getSparrowAtlas('Circles');
+							babyArrow.frames = Paths.getSparrowAtlas('Circless');
 					babyArrow.animation.addByPrefix('green', 'arrowUP');
 					babyArrow.animation.addByPrefix('blue', 'arrowDOWN');
 					babyArrow.animation.addByPrefix('purple', 'arrowLEFT');
