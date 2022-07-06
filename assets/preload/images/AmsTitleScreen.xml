@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="AmsTitleScreen.png">
+	<!-- Created with Adobe Animate version 21.0.1.37179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Ams_dance0000" x="17" y="17" width="595" height="1255" frameX="-32" frameY="-8" frameWidth="636" frameHeight="1263"/>
+	<SubTexture name="Ams_dance0001" x="17" y="17" width="595" height="1255" frameX="-32" frameY="-8" frameWidth="636" frameHeight="1263"/>
+	<SubTexture name="Ams_dance0002" x="612" y="17" width="636" height="1258" frameX="0" frameY="-5" frameWidth="636" frameHeight="1263"/>
+	<SubTexture name="Ams_dance0003" x="612" y="17" width="636" height="1258" frameX="0" frameY="-5" frameWidth="636" frameHeight="1263"/>
+	<SubTexture name="Ams_dance0004" x="1248" y="17" width="599" height="1263" frameX="-21" frameY="0" frameWidth="636" frameHeight="1263"/>
+	<SubTexture name="Ams_dance0005" x="1248" y="17" width="599" height="1263" frameX="-21" frameY="0" frameWidth="636" frameHeight="1263"/>
+	<SubTexture name="Ams_dance0006" x="1847" y="17" width="595" height="1261" frameX="-32" frameY="-2" frameWidth="636" frameHeight="1263"/>
+	<SubTexture name="Ams_dance0007" x="1847" y="17" width="595" height="1261" frameX="-32" frameY="-2" frameWidth="636" frameHeight="1263"/>
+	<SubTexture name="Ams_dance0008" x="1847" y="17" width="595" height="1261" frameX="-32" frameY="-2" frameWidth="636" frameHeight="1263"/>
+	<SubTexture name="Ams_dance0009" x="1847" y="17" width="595" height="1261" frameX="-32" frameY="-2" frameWidth="636" frameHeight="1263"/>
+	<SubTexture name="Ams_dance0010" x="1847" y="17" width="595" height="1261" frameX="-32" frameY="-2" frameWidth="636" frameHeight="1263"/>
+	<SubTexture name="Ams_dance0011" x="1847" y="17" width="595" height="1261" frameX="-32" frameY="-2" frameWidth="636" frameHeight="1263"/>
+	<SubTexture name="Ams_dance0012" x="1847" y="17" width="595" height="1261" frameX="-32" frameY="-2" frameWidth="636" frameHeight="1263"/>
+	<SubTexture name="Ams_dance0013" x="1847" y="17" width="595" height="1261" frameX="-32" frameY="-2" frameWidth="636" frameHeight="1263"/>
+	<SubTexture name="Ams_dance0014" x="1847" y="17" width="595" height="1261" frameX="-32" frameY="-2" frameWidth="636" frameHeight="1263"/>
+	<SubTexture name="Ams_dance0015" x="1847" y="17" width="595" height="1261" frameX="-32" frameY="-2" frameWidth="636" frameHeight="1263"/>
+</TextureAtlas>
