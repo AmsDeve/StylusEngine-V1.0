@@ -1,5 +1,6 @@
 package;
 
+import haxe.ds.StringMap;
 import data.EngineData;
 #if desktop
 import Discord.DiscordClient;
@@ -168,13 +169,22 @@ class TitleState extends MusicBeatState
 			}, 0);
 		// logoBl.screenCenter();
 		// logoBl.color = FlxColor.BLACK;
-
+#if AMS_WTRMRKS
+gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
+gfDance.frames = Paths.getSparrowAtlas('AmsTitleScreen');
+gfDance.antialiasing = true;
+gfDance.animation.addByPrefix('dance', 'Ams_dance', 24);
+gfDance.animation.play('dance');
+gfDance.updateHitbox();
+		#else
 		gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
 		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
 		gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 		gfDance.antialiasing = true;
+		#end
 		add(gfDance);
+		
 		add(logoBl);
 
 		titleText = new FlxSprite(100, FlxG.height * 0.8);
@@ -200,6 +210,7 @@ class TitleState extends MusicBeatState
 		textGroup = new FlxGroup();
 
 		blackScreen = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		credGroup.add(blackScreen);
 
 		ngSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('newgrounds_logo'));
 		add(ngSpr);
@@ -363,14 +374,14 @@ class TitleState extends MusicBeatState
 		logoBl.animation.play('bump');
 		danceLeft = !danceLeft;
 
+		#if AMS_WTRMRKS
+		gfDance.animation.play('dance');
+		#else
 		if (danceLeft)
 			gfDance.animation.play('danceRight');
 		else
 			gfDance.animation.play('danceLeft');
-
-		FlxG.log.add(curBeat);
-
-
+#end
 		FlxTween.tween(FlxG.camera, {zoom:1.02}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD});
 
 		switch (curBeat)
