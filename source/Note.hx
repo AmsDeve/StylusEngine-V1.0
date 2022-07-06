@@ -87,55 +87,31 @@ class Note extends FlxSprite
 			default:
 				frames = Paths.getSparrowAtlas('NOTE_assets');
 				if (FlxG.save.data.circlesNotes)
-					frames = Paths.getSparrowAtlas('Circles');
+					frames = Paths.getSparrowAtlas('Circless');
 //-----------------------------------------------
 				animation.addByPrefix('greenScroll', 'green0');
-				if (FlxG.save.data.circlesNotes)
-					animation.addByPrefix('greenScroll', 'green alone0');
 
 				animation.addByPrefix('redScroll', 'red0');
-				if (FlxG.save.data.circlesNotes)
-					animation.addByPrefix('redScroll', 'red alone0');
 
 				animation.addByPrefix('blueScroll', 'blue0');
-				if (FlxG.save.data.circlesNotes)
-					animation.addByPrefix('blueScroll', 'blue alone0');
 
 				animation.addByPrefix('purpleScroll', 'purple0');
-				if (FlxG.save.data.circlesNotes)
-					animation.addByPrefix('purpleScroll', 'purple alone0');
 //------------------------------------------------
 				animation.addByPrefix('purpleholdend', 'pruple end hold');
-				if (FlxG.save.data.circlesNotes)
-					animation.addByPrefix('purpleholdend', 'purple tail');
 
 				animation.addByPrefix('greenholdend', 'green hold end');
-				if (FlxG.save.data.circlesNotes)
-					animation.addByPrefix('greenholdend', 'green tail');
 
 				animation.addByPrefix('redholdend', 'red hold end');
-				if (FlxG.save.data.circlesNotes)
-					animation.addByPrefix('redholdend', 'red tail');
 					
 				animation.addByPrefix('blueholdend', 'blue hold end');
-				if (FlxG.save.data.circlesNotes)
-					animation.addByPrefix('blueholdend', 'blue tail');
 //-------------------------------------------------
 				animation.addByPrefix('purplehold', 'purple hold piece');
-				if (FlxG.save.data.circlesNotes)
-					animation.addByPrefix('purplehold', 'purple hold');
 
 				animation.addByPrefix('greenhold', 'green hold piece');
-				if (FlxG.save.data.circlesNotes)
-					animation.addByPrefix('greenhold', 'green hold');
 
 				animation.addByPrefix('redhold', 'red hold piece');
-				if (FlxG.save.data.circlesNotes)
-					animation.addByPrefix('redhold', 'red hold');
 
 				animation.addByPrefix('bluehold', 'blue hold piece');
-				if (FlxG.save.data.circlesNotes)
-					animation.addByPrefix('bluehold', 'blue hold');
 //--------------------------------------------------
 				setGraphicSize(Std.int(width * 0.7));
 				updateHitbox();
