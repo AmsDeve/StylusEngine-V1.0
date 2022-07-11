@@ -13,7 +13,7 @@
 - *More Options*
 - *Fix some bugs*
 - *Fix the reset score*
-- *Fix the offsets of circular notes*
+
 - *Credits menu*
 
 *And thats all*
